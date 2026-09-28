@@ -1,38 +1,15 @@
-  ## Public datasets
+# Bulk-projected immune reactivation score in breast cancer
 
-  Raw datasets are available from the Gene Expression Omnibus:
+Analysis code for the PLOS ONE revision **“Immune-cell abundance coupling and incremental prognostic information of a bulk-projected immune reactivation score in breast cancer”** (PONE-D-26-40686).
 
-  - GSE176078
-  - GSE58812
-  - GSE96058
+## Repository contents
 
-  No newly generated sequencing data are included in this repository.
+- [`scripts/`](scripts/README.md): complete author-generated analysis and figure scripts. The revised analyses are under `scripts/revision_R1/`; root-level scripts `00`–`26` are retained for historical provenance.
+- [`tcrt_display_item_manifest.tsv`](tcrt_display_item_manifest.tsv): legacy manifest retained from an earlier submission workflow; it is not the display-item manifest for the PLOS ONE revision.
+- [`LICENSE`](LICENSE): MIT license for the author-generated code. Third-party data and software retain their source terms.
 
-  ## Repository contents
+## Reproduction
 
-  - `scripts/`: analysis scripts used for data processing, scoring, survival
-  analysis, sensitivity analyses, figure/table generation, and TCRT submission-
-  package preparation.
-  - `tcrt_display_item_manifest.tsv`: mapping of selected main and supplementary
-  display items for the TCRT submission package.
+Follow [`scripts/README.md`](scripts/README.md). Reproduction of the reported R1 analyses requires the S1 and S2 Supporting Information files accompanying the manuscript; sample-level inputs and derived result tables are provided there and are not duplicated in this code repository. Public input sources and retrieval details are documented in the S2 File manifest. No controlled-access raw GSE176078 sequencing reads are redistributed.
 
-  ## Reproducibility
-
-  Scripts were run from the project root in the order documented in `scripts/
-  README.md`.
-
-  The original analyses used R 4.2.0 with a project-local R package library.
-  Each R script sets `set.seed(123)` where applicable and writes session
-  information logs.
-
-  ## Data availability
-
-  Raw public datasets are available from GEO under GSE176078, GSE58812, and
-  GSE96058.
-
-  Derived non-identifiable result files and analysis scripts are made available
-  for reproducibility.
-
-  ## License
-
-  This repository is released under the MIT License.
+The code provides retrospective analysis, not a clinical prediction tool. See the manuscript for the analysis design, endpoints, interpretation and limitations.
